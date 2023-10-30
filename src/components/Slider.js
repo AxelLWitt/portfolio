@@ -6,7 +6,7 @@ export default function Slider() {
   const sliderRef = useRef(null);
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
-  const [currentTranslateX, setCurrentTranslateX] = useState(0);
+  const [currentTranslateX, setCurrentTranslateX] = useState(200);
 
   useEffect(() => {
     const handleMouseDown = e => {
@@ -19,7 +19,7 @@ export default function Slider() {
 
       const moveX = e.clientX - startX;
       const newTranslateX = currentTranslateX + moveX;
-      const restrictTrack = Math.max(Math.min(newTranslateX, 0), -100)
+      const restrictTrack = Math.max(Math.min(newTranslateX, 500), -1000)
       setStartX(e.clientX);
       setCurrentTranslateX(restrictTrack);
     };
@@ -47,7 +47,7 @@ export default function Slider() {
       style={{ transform: `translateX(${currentTranslateX}px)` }}
     >
       {projects.map((project, index) => (
-        <SliderElement key={index} project={project}/>
+        <SliderElement key={index} project={project} placement={currentTranslateX}/>
       ))}
     </div>
   );
