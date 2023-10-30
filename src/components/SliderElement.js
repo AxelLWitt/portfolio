@@ -1,12 +1,9 @@
 import React from 'react'
 
-export default function SliderElement({data}) {
-    // let image = data.image
-    // console.log({data})
+export default function SliderElement({project}) {
   return (
-    <div>
-      <h1>{data.name}</h1>
-        {/* <image src={image}>{data.name}</image> */}
+    <div className='silder-photo'>
+        <img className='element' src={project.image} alt='test' draggable='false'/>
     </div>
   )
 }

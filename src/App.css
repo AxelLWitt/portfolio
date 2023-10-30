@@ -3,7 +3,6 @@ body{
   width:100vw;
   background-color: black;
   margin:0;
-  overflow:hidden;
 }
 
 .title-card{
@@ -23,4 +22,14 @@ body{
 .image-slider{
   display:flex;
   gap:4vmin;
+  overflow:hidden;
+  width:240vmin;
+}
+
+.element{
+  width:56vmin;
+  height:70vmin;
+  object-fit: cover;
+  object-position:center;
+  user-select: none;
 }
