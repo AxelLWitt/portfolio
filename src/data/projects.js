@@ -18,7 +18,7 @@ export const projects = [
     {
         id:3,
         name: 'FurniTech',
-        image: '/Furnitech.png',
+        image: '/FurniTech.png',
         deployedurl:'https://furni-tech.vercel.app/',
         githubrepos: { frontend: 'https://github.com/GerardoAP22/FurniTech-frontend/tree/main/src', backend: 'https://github.com/felix-carela/FurniTech-backend/tree/main/furniture_app'},
         description: 'A website that allows a user to buy, checkout, create user, add reviews to furniture and review or cancel previous orders'
